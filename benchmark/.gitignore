@@ -1,0 +1,7 @@
+data/
+output/
+logs/
+.env
+node_modules/
+scratch/
+backup/

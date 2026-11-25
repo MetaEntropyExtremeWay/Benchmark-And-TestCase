@@ -1,0 +1,7 @@
+# OS junk
+Thumbs.db
+.DS_Store
+
+# Local env / deps (any subdir)
+.env
+node_modules/

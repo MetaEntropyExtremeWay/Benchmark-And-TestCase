@@ -1,0 +1,27 @@
+{
+  "name": "mc-lmg-benchmark",
+  "version": "0.10.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "description": "Benchmark harness for the mc memory service and the lmg orchestration suite on a frozen LongMemEval-S subset: lmg product-chain runs (formation -> qa -> judge -> readout) plus zero-LLM mc retrieval tests (prepare -> recall).",
+  "scripts": {
+    "extract": "tsx shared/scripts/extract.ts",
+    "prepare": "tsx mc/prepare.ts",
+    "recall": "tsx mc/recall.ts",
+    "clean": "tsx mc/clean.ts",
+    "formation": "tsx lmg/formation.ts",
+    "snapshot": "tsx shared/snapshot.ts",
+    "qa": "tsx lmg/qa.ts",
+    "judge-qa": "tsx lmg/judge-qa.ts",
+    "readout": "tsx lmg/readout.ts",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "vitest": "^3.0.0"
+  }
+}
